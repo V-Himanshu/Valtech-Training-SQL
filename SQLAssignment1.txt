@@ -1,0 +1,21 @@
+1. CREATE DATABASE TrainingDB;
+2. CREATE TABLE Trainees(empid int PRIMARY KEY, name varchar(20), email varchar(20), skills varchar(20), phone int(10));
+CREATE TABLE Courses(courseId int PRIMARY KEY, courseName varchar(20), prerequisite varchar(20), courseFee int);
+CREATE TABLE Instructors(InstructorId int PRIMARY KEY, InstructorName varchar(20), InstructorSkills varchar(20), email varchar(20));
+3. INSERT INTO courses VALUES(1, 'Java', 'Basics of C & C++', 10250);
+INSERT INTO courses VALUES(2, '.Net', 'No Prerequisite', 11250);
+INSERT INTO courses VALUES(3, 'PHP', 'Basics of HTML', 5650);
+INSERT INTO courses VALUES(4, 'Spring', 'Basics of Java', 15650);
+INSERT INTO courses VALUES(5, 'Bootstrap', 'Basics of CSS', 4256);
+4. INSERT INTO instructors VALUES(1, 'Vaishali', 'SQL, .Net', 'vaishali@valtech.com');
+INSERT INTO instructors VALUES(2, 'Basvaraj', 'SQL, Java', 'basvaraj@valtech.com');
+INSERT INTO instructors VALUES(3, 'Sethu', 'Java, Spring', 'sethu@valtech.com');
+INSERT INTO instructors VALUES(4, 'Deepika', 'C and C++', 'deepika@valtech.com');
+INSERT INTO instructors VALUES(5, 'Shantala', 'Python', 'shantala@valtech.com');
+5. BULK INSERT table_name
+FROM 'Path'
+WITH
+(
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n'
+)
